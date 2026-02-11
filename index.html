@@ -34,12 +34,13 @@ body{font-family:"Cormorant Garamond",serif;background:linear-gradient(135deg,#f
 
 /* CARDS */
 .header-box{display:inline-block;border:2px solid #d8b384;border-radius:12px;padding:16px 24px;font-family:"Playfair Display",serif;font-size:clamp(1.6rem,5vw,2.4rem);margin-bottom:28px;animation:floatHeader 6s ease-in-out infinite;color:#2c1f1e}
-.zoom-card,.gift-card{background:rgba(255,255,255,0.9);border-radius:18px;padding:32px;margin-bottom:48px;text-align:center;box-shadow:0 25px 60px rgba(0,0,0,0.25);animation:floatSlow 9s ease-in-out infinite}
+.zoom-card,.gift-card,.thank-you-card{background:rgba(255,255,255,0.9);border-radius:18px;padding:32px;margin-bottom:48px;text-align:center;box-shadow:0 25px 60px rgba(0,0,0,0.25);animation:floatSlow 9s ease-in-out infinite}
 .zoom-meeting{font-size:clamp(1.4rem,3.5vw,1.6rem);color:#d8b384;margin:20px 0;padding:20px;border-radius:12px;background:rgba(216,179,132,0.1)}
 .join-button{width:100%;padding:22px;border:none;border-radius:35px;background:#d8b384;font-size:clamp(1.2rem,4.5vw,1.3rem);cursor:pointer;color:white;text-decoration:none;display:block;margin:16px 0;font-family:"Playfair Display",serif;font-weight:600;transition:all 0.3s ease;min-height:64px}
 .join-button:hover{transform:translateY(-2px);box-shadow:0 15px 40px rgba(216,179,132,0.4)}
 .gift-grid{display:grid;grid-template-columns:1fr;gap:20px;margin:30px 0}@media (min-width:600px){.gift-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}}
 .gift-grid .join-button{padding:20px;font-size:1.2rem}
+.thank-you-card img{max-width:240px;margin-top:28px;border-radius:12px;width:100%;height:auto}
 
 /* ANIMATIONS */
 @keyframes floatSlow{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
@@ -107,6 +108,13 @@ Join Zoom Meeting
 </a>
 </div>
 </div>
+
+<!-- THANK YOU CARD -->
+<div class="thank-you-card">
+<a href="#" class="header-box">Thank You</a>
+<p style="font-size:1.3rem;margin-bottom:20px;color:#555;line-height:1.6">We cannot wait to celebrate with you.</p>
+<img src="00.jpg" alt="Thank You" loading="lazy">
+</div>
 </div>
 
 <footer class="footer">Made with love by Nqobile and Sebina ❤️</footer>
@@ -147,3 +155,4 @@ function copyAccount() {
 </script>
 </body>
 </html>
+
