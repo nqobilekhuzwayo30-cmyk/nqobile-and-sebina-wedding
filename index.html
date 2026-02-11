@@ -48,7 +48,7 @@ body{font-family:"Cormorant Garamond",serif;background:linear-gradient(135deg,#f
 .gift-grid .join-button{padding:20px;font-size:1.2rem}
 .thank-you-card img{max-width:240px;margin-top:28px;border-radius:12px;width:100%;height:auto}
 
-/* FIXED INVITATION POPUP */
+/* PERFECTED INVITATION POPUP */
 .invite-overlay {
   position: fixed;
   inset: 0;
@@ -198,7 +198,7 @@ Join Zoom Meeting
 
 <footer class="footer">Made with love by Nqobile and Sebina ❤️</footer>
 
-<!-- FIXED INVITATION POPUP -->
+<!-- INVITATION POPUP -->
 <div class="invite-overlay" id="inviteOverlay">
 <div class="invite-popup">
 <h2>You Are Invited</h2>
@@ -228,18 +228,19 @@ setInterval(() => {
   secondsEl.textContent = Math.floor((diff / 1000) % 60);
 }, 1000);
 
-// FIXED POPUP - Auto-show after 4s delay, elegant fade-out after 6s total
-setTimeout(() => {
-  document.getElementById("inviteOverlay").classList.add("show");
-}, 4000);
-
-setTimeout(() => {
+// PERFECT TIMELINE: Load → IMMEDIATE scale-in → stay 4s → elegant fade-out
+document.addEventListener('DOMContentLoaded', () => {
   const overlay = document.getElementById("inviteOverlay");
-  overlay.classList.remove("show");
+  
+  // Scale in immediately (beautiful entrance)
+  setTimeout(() => overlay.classList.add("show"), 500);
+  
+  // Stay 4s then fade out elegantly
   setTimeout(() => {
-    overlay.style.display = "none";
-  }, 600);
-}, 10000); // Show for 6s total (4s delay + 6s visible)
+    overlay.classList.remove("show");
+    setTimeout(() => overlay.style.display = "none", 600);
+  }, 4500); // 500ms delay + 4s visible = 4500ms
+});
 
 // FNB COPY
 function copyAccount() {
